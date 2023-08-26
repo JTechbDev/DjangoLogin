@@ -1,0 +1,55 @@
+
+{% extends "dappx/base.html" %}
+{% load static %}
+{% block body_block %}
+<!-- ========================= SECTION CONTENT ========================= -->
+<section class="section-content padding-y">
+    <div class="container">
+    
+    <div class="row">
+        <aside class="col-md-3">
+            <nav class="list-group">
+                <a class="list-group-item active" href="page-profile-main.html"> Account overview  </a>
+               
+            </nav>
+        </aside> <!-- col.// -->
+        <main class="col-md-9">
+    
+            <article class="card mb-3">
+                <div class="card-body">
+                    
+                    <figure class="icontext">
+                            <div class="icon">
+                                <img class="rounded-circle img-sm border" src="{{ user.userprofileinfo.profile_pic.url }}">
+                            </div>
+                            <div class="text">
+                                <strong>Welcome  {{ user.username }} </strong> <br> 
+                                <p class="mb-2">   </p> 
+                                
+                                
+                                <a href="#" class="btn btn-light btn-sm"></a>
+                            </div>
+                    </figure>
+                    <hr>
+                    <p>
+                        <i class="fa fa-email text-muted"></i> &nbsp; My email address: &nbsp  {{ user.email }} &nbsp 
+                        <a href="#" class="btn-link"> </a>
+                    </p>
+    
+                    
+    
+
+                    
+    
+                </div> <!-- card-body .// -->
+            </article> <!-- card.// -->
+    
+            
+    
+        </main> <!-- col.// -->
+    </div>
+    
+    </div> <!-- container .//  -->
+    </section>
+    <!-- ========================= SECTION CONTENT END// ========================= -->
+{% endblock %}
