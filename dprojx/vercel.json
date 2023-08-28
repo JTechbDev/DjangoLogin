@@ -1,0 +1,14 @@
+{
+    "builds": [
+      {
+        "src": "dappx/wsgi.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "dappx/wsgi.py"
+      }
+    ]
+}

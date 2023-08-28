@@ -121,15 +121,18 @@
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'index' %}">Home </a>
             </li>
+			{% if user.is_authenticated %}
+			<li class="nav-item">
+				<a class="nav-link" href="{% url 'dappx:profile' %}">My Profile</a>
+				</li>
+				{% else %}
             <li class="nav-item">
             <a class="nav-link" href="{% url 'dappx:register' %}">Register</a>
             </li>
             <li class="nav-item">
             <a class="nav-link" href="{% url 'dappx:user_login' %}">Login</a>
             </li>
-            <li class="nav-item">
-            <a class="nav-link" href="{% url 'dappx:profile' %}">My Profile</a>
-            </li>
+            {% endif %}
         </ul>
         
         </div> <!-- collapse .// -->
